@@ -1,0 +1,12 @@
+{
+  "name": "hello-js",
+  "version": "1.0.0",
+  "description": "Ultra simple node app to test teresa",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node run.js"
+  },
+  "author": "Diego Garcia",
+  "license": "MIT"
+}
