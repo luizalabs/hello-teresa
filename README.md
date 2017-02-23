@@ -3,11 +3,10 @@ A collection of `Hello World` ready to deploy on [teresa](https://github.com/lui
 
 ## Deploy
 
-Some information to up and run your application on Kubernetes with Teresa.
+Some information to get your application up and running on Kubernetes with Teresa.
 
 ### Port
-Don't use a fixed port to up your web application, instead,
-read the environment variable `PORT`, for instance:
+Don't listen on a hardcoded port, but instead read the port from the environment variable `PORT`. For instance:
 
 ```go
 port := os.Getenv("PORT")
@@ -17,7 +16,7 @@ if port == "" {
 http.ListenAndServe(fmt.Sprintf(":%s", port), nil)
 ```
 
-The deploy process will set this environment variable
+The deploy process will set this variable
 
 ### Procfile
 According to [Heroku's docs](https://devcenter.heroku.com/articles/procfile):
@@ -34,8 +33,7 @@ As an example, a Python application might have the following command on Procfile
 
 
 ### Language detection
-When you make a deploy on Teresa you don't need to specify the language of your application,
-because, Teresa has a _language detection_ step in it's deploy pipeline.
+When you deploy an app using Teresa, you don't have to specify your application's language - it'll be automatically detected.
 
 > This step it's based on [Heroku's build packs](https://devcenter.heroku.com/articles/buildpacks).
 
