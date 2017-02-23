@@ -1,0 +1,18 @@
+healthCheck:
+    liveness:
+        path: /healthcheck/
+        timeoutSeconds: 2
+        initialDelaySeconds: 3
+        periodSeconds: 5
+        failureThreshold: 2
+        successThreshold: 1
+    readiness:
+        path: /healthcheck/
+        timeoutSeconds: 2
+        initialDelaySeconds: 5
+        periodSeconds: 3
+        failureThreshold: 5
+        successThreshold: 1
+rollingUpdate:
+    maxUnavailable: "30%"
+    maxSurge: "2"
