@@ -120,6 +120,18 @@ web: gunicorn -b 0.0.0.0:$PORT -w 3 --pythonpath src hello_world.wsgi
 
 Teresa will run the nodejs and python build processes in this order.
 
+### .teresaignore
+A `.teresaignore` file specifies intentionally files that Teresa should ignore.  
+Each line in a `.teresaignore` file specifies a pattern (regex), blank lines are ignored, e.g.
+
+```
+\.git
+node_modules
+
+.*_tests
+\w+\.pyc
+```
+
 ### teresa.yaml
 Some features can be configured in a file called `teresa.yaml` in the the root dir of application.
 
