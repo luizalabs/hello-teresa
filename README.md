@@ -122,14 +122,14 @@ Teresa will run the nodejs and python build processes in this order.
 
 ### .teresaignore
 A `.teresaignore` file specifies intentionally files that Teresa should ignore.  
-Each line in a `.teresaignore` file specifies a pattern (regex), blank lines are ignored, e.g.
+Each line in a `.teresaignore` file specifies a pattern (glob), blank lines are ignored, e.g.
 
 ```
-\.git
-node_modules
+.git
+node_modules/
 
-.*_tests
-\w+\.pyc
+*_tests
+*.pyc
 ```
 
 ### teresa.yaml
