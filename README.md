@@ -150,17 +150,17 @@ You can set both (_readiness_ and _liveness_) for your application in section `h
 healthCheck:
     liveness:
         path: /healthcheck/
-        timeoutSeconds: 2
+        timeoutSeconds: 5
         initialDelaySeconds: 10
         periodSeconds: 5
-        failureThreshold: 2
+        failureThreshold: 5
         successThreshold: 1
     readiness:
         path: /healthcheck/
-        timeoutSeconds: 5
+        timeoutSeconds: 2
         initialDelaySeconds: 5
         periodSeconds: 5
-        failureThreshold: 5
+        failureThreshold: 2
         successThreshold: 1
 ```
 
